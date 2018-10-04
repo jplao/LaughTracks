@@ -18,9 +18,7 @@ RSpec.describe 'a visitor visits the comedian page' do
 
       expect(Comedian.average_age).to eq(50)
     end
-  end
 
-  describe 'a visitor looks at the statistics' do
     it 'shows the total for all specials' do
 
       Special.create(name: "Louis C.K. 2017", run_time: 74)
@@ -29,9 +27,7 @@ RSpec.describe 'a visitor visits the comedian page' do
 
       expect(Comedian.total_specials).to eq(3)
     end
-  end
 
-  describe 'a visitor looks at the statistics' do
     it 'shows the average run time for all specials' do
 
       Special.create(name: "Louis C.K. 2017", run_time: 74)
