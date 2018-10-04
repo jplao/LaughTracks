@@ -1,24 +1,31 @@
+require './app/models/comedian'
+require './app/models/special'
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.clean
+
 louis = Comedian.create(name: "Louis C.K", age: 51, city: "Washington D.C")
 louis.specials.create(name: "Louis C.K. 2017", run_time: 74)
 louis.specials.create(name: "Louis C.K.: Live at the Comedy Store", run_time: 66)
 louis.specials.create(name: "Louis C.K. Oh My God", run_time: 58)
 
-dave = Comedian.create(name: "Dave Chappelle", age: 45, City: "Washington D.C")
+dave = Comedian.create(name: "Dave Chappelle", age: 45, city: "Washington D.C")
 dave.specials.create(name: "Dave Chapelle: Equanimity", run_time: 60)
 dave.specials.create(name: "Dave Chapelle: The Bird Revelation", run_time: 49)
 dave.specials.create(name: "Dave Chapelle: For What It's Worth", run_time: 60)
 
-aziz = Comedian.create(name: "Aziz Ansari", age: 35, City: "Columbia, SC")
+aziz = Comedian.create(name: "Aziz Ansari", age: 35, city: "Columbia, SC")
 aziz.specials.create(name: "Aziz Ansari: Buried Alive", run_time: 80)
 aziz.specials.create(name: "Aziz Ansari: Dangerously Delicious", run_time: 61)
 aziz.specials.create(name: "Aziz Ansari: Intimate Moments for a Sensual Evening", run_time: 56)
 
-david = Comedian.create(name: "David Cross", age: 54, City: "Atlanta, GA")
+david = Comedian.create(name: "David Cross", age: 54, city: "Atlanta, GA")
 david.specials.create(name: "David Cross: Making America Great Again", run_time: 74)
 david.specials.create(name: "David Cross: Bigger & Blackerer", run_time: 90)
 david.specials.create(name: "David Cross: Let America Laugh", run_time: 93)
 
-patton = Comedian.create(name: "Patton Oswalt", age: 49, City: "Portsmouth, VA")
+patton = Comedian.create(name: "Patton Oswalt", age: 49, city: "Portsmouth, VA")
 patton.specials.create(name: "Patton Oswalt: Annihilation ", run_time: 66)
 patton.specials.create(name: "Patton Oswalt: Talking for Clapping", run_time: 65)
 patton.specials.create(name: "Patton Oswalt: Tragedy Plus Comedy Equals Time", run_time: 59)
