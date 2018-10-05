@@ -15,7 +15,7 @@ dave.specials.create(name: "Dave Chapelle: Equanimity", run_time: 60)
 dave.specials.create(name: "Dave Chapelle: The Bird Revelation", run_time: 49)
 dave.specials.create(name: "Dave Chapelle: For What It's Worth", run_time: 60)
 
-aziz = Comedian.create(name: "Aziz Ansari", age: 35, city: "Columbia, SC")
+aziz = Comedian.create(name: "Aziz Ansari", age: 34, city: "Columbia, SC")
 aziz.specials.create(name: "Aziz Ansari: Buried Alive", run_time: 80)
 aziz.specials.create(name: "Aziz Ansari: Dangerously Delicious", run_time: 61)
 aziz.specials.create(name: "Aziz Ansari: Intimate Moments for a Sensual Evening", run_time: 56)

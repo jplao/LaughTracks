@@ -36,6 +36,17 @@ RSpec.describe 'a visitor visits the comedian page' do
 
       expect(Special.average_run_time).to eq(66)
     end
+
+    it 'shows a unique list of cities for each comedian on the page' do
+
+      Comedian.create(name: "Will Ferrell", age: 51, city: "Irvine, CA")
+      Comedian.create(name: "Chris Kattan", age: 48, city: "Los Angeles, CA")
+      Comedian.create(name: "Louis C.K", age: 51, city: "Washington D.C")
+
+      expected_cities = ["Irvine, CA", "Los Angeles, CA", "Washington D.C"]
+
+      expect(Comedian.cities).to eq(expected_cities)
+    end
   end
 end
 
