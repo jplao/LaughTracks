@@ -27,6 +27,10 @@ h4{
   font-size: 15px;
 }
 
+img{
+  width: 150px;
+}
+
 .header {
   background-color: white;
   opacity: 0.5;

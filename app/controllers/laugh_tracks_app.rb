@@ -8,7 +8,6 @@ class LaughTracksApp < Sinatra::Base
       @comedians = Comedian.all
       @specials = Special.all
     end
-    #@specials = Special.all
     erb :"comedians/index"
   end
 

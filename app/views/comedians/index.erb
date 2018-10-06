@@ -27,7 +27,9 @@
     <h4>TV Specials:</h4>
       <% comedian.specials.each do |special| %>
       <strong><%= special.name %></strong>
+      <img src=<%= special.thumbnail%> alt=<%= special.name%>>
       <br>Run time: <%= special.run_time %><br><br>
+
       <% end %>
   </div>
 </div>
