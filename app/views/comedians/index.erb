@@ -18,7 +18,8 @@
 
 <section class ="grid">
 <% @comedians.each do |comedian| %>
-<div id='comedians'>
+<div id="comedians">
+<div id='comedians<%=comedian.id%>'>
   <h3><%= comedian.name %></h3>
   Age: <%= comedian.age %>
   <br>City: <%= comedian.city %>
@@ -32,6 +33,7 @@
 
       <% end %>
   </div>
+</div>
 </div>
 </div>
 <% end %>
