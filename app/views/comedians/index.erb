@@ -2,34 +2,35 @@
 
 <div class="header">
   <h2>Statistics</h2>
-  <p>Average Age of Comedians: <%= @comedians.average_age.round(2) %></p>
-  <p>Average Special Run Length: <%= Special.average_run_time %></p>
-  <p>Total TV Specials: <%= Special.count%></p>
-  <p>Cities: </p>
-    <ul>
-      <%= @comedians.cities%>
-    </ul>
+  <section class="grid">
+    <p><strong>Average TV Special Run Time: </strong><br><br><%= @specials.average_run_time.round(2) %></p>
+    <p><strong>Total TV Specials: </strong><br><br><%= @specials.count%></p>
+    <p><strong>Average Age: </strong><br><br><%= @comedians.average_age.round(2)%></p>
+    <p><strong>Cities:</strong><br>
+      <%@comedians.unique_cities.each do |city|%>
+        <br><%=city%>
+        <% end %>
+    </p>
+  </section>
 </div>
 <br>
 <br>
 
-
-
-    <div id='comedians'>
-      <% @comedians.each do |comedian| %>
-      <h3><%= comedian.name %></h3>
-      <p>Age: <%= comedian.age %></p>
-      <p>City: <%= comedian.city %></p>
-      <p>Total Specials: <%= comedian.specials.count %></p>
-    </div>
-
-    <div id='specials'>
-      <ul>
-        <h4>TV Specials:</h4>
-        <% comedian.specials.each do |special| %>
-        <li><%= special.name %></li>
-          <p>Run time: <%= special.run_time %></p>
-          <% end %>
-        </ul>
-    </div>
-    <% end %>
+<section class ="grid">
+<% @comedians.each do |comedian| %>
+<div id='comedians'>
+  <h3><%= comedian.name %></h3>
+  Age: <%= comedian.age %>
+  <br>City: <%= comedian.city %>
+  <br>Total Specials: <%= comedian.specials.count %>
+  <div id='specials'>
+    <h4>TV Specials:</h4>
+      <% comedian.specials.each do |special| %>
+      <strong><%= special.name %></strong>
+      <br>Run time: <%= special.run_time %><br><br>
+      <% end %>
+  </div>
+</div>
+</div>
+<% end %>
+</section>

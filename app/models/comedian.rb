@@ -15,7 +15,7 @@ class Comedian < ActiveRecord::Base
     average(specials[:run_time])
   end
 
-  def self.cities
-    pluck(:city)
+  def self.unique_cities
+    distinct.pluck(:city)
   end
 end
