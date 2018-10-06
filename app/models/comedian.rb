@@ -10,4 +10,12 @@ class Comedian < ActiveRecord::Base
   def self.total_specials
     sum(:specials)
   end
+
+  def self.average_run_time
+    average(specials[:run_time])
+  end
+
+  def self.cities
+    pluck(:city)
+  end
 end
