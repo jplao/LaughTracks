@@ -35,7 +35,7 @@ RSpec.describe 'a visitor visits the queried comedian page' do
 
 
   describe 'a visitor looks at the statistics' do
-    it 'shows the average age for all comedians' do
+    it 'shows the average age for all comedians that match query' do
       louis = Comedian.create(name: "Louis C.K", age: 51, city: "Washington D.C")
       louis.specials.create(name: "Louis C.K. 2017",
                             run_time: 74,
@@ -52,7 +52,7 @@ RSpec.describe 'a visitor visits the queried comedian page' do
       end
     end
 
-    it 'shows the total for all specials' do
+    it 'shows the total for all specials of comedians that match query' do
       louis = Comedian.create(name: "Louis C.K", age: 51, city: "Washington D.C")
       louis.specials.create(name: "Louis C.K. 2017",
                             run_time: 74,
@@ -78,7 +78,7 @@ RSpec.describe 'a visitor visits the queried comedian page' do
       end
     end
 
-    it 'shows the average run time for all specials' do
+    it 'shows the average run time for all specials of comedians that match query' do
       louis = Comedian.create(name: "Louis C.K", age: 51, city: "Washington D.C")
       louis.specials.create(name: "Louis C.K. 2017",
                             run_time: 74,
@@ -98,7 +98,7 @@ RSpec.describe 'a visitor visits the queried comedian page' do
       end
     end
 
-    it 'shows a unique list of cities for each comedian on the page' do
+    it 'shows a unique list of cities for comedians that match query' do
       louis = Comedian.create(name: "Louis C.K", age: 51, city: "Washington D.C")
       louis.specials.create(name: "Louis C.K. 2017",
                             run_time: 74,
