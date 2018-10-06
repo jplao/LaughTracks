@@ -48,7 +48,7 @@ RSpec.describe 'a visitor visits the queried comedian page' do
 
       visit '/comedians?age=51'
       within('.header') do
-        expect(page).to have_content(51)
+        expect(page).to have_content("Average Age: 51")
       end
     end
 
